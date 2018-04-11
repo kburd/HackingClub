@@ -1,0 +1,4 @@
+Vinay,-10
+Vinay,-10
+Vinay,10,Grass
+Vinay,10,Grass

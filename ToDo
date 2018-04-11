@@ -1,0 +1,8 @@
+Controller
+    -Set up server
+View
+    -Set up html template
+    -Set up model to html
+    -Determine how to represent circles in html
+Model
+    -

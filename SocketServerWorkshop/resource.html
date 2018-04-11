@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html id = main>
+    <body>
+        <h1 align="center"> My First Webpage!</h1>
+        <img src="http://www.stonybrook.edu/happenings/wp-content/uploads/Major_League_Hacking_logo.svg_.png" width="100%" height="300"><br>
+        <button onclick="sendRequest('increment')">Increment</button><br>
+        *number*
+    </body>
+</html>
+<script>
+    function sendRequest(mode){
+        var theUrl = "http://128.4.141.39:8080/mode=" + mode;
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', theUrl, true);
+        xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+        xhr.send();
+        xhr.onreadystatechange = processRequest;
+
+        function processRequest(e) {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                document.getElementById('main').innerHTML = xhr.responseText;
+            }
+        }
+    }
+</script>
